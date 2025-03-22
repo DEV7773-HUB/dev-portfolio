@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Restricted Access</h2>
+        <p>Enter Credentials to Proceed</p>
+        <input type="text" placeholder="Username" id="username">
+        <input type="password" placeholder="Password" id="password">
+        <button onclick="validateLogin()">Enter</button>
+    </div>
+    
+    <script>
+        function validateLogin() {
+            const user = document.getElementById("username").value;
+            const pass = document.getElementById("password").value;
+            if (user === "Dev Jangid" && pass === "DEV@1511@") {
+                window.location.href = "index.html";
+            } else {
+                alert("Access Denied!");
+            }
+        }
+    </script>
+    
+</body>
+</html>

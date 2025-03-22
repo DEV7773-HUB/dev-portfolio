@@ -1,0 +1,97 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1f1f1f, #3a3a3a);
+    color: #fff;
+    text-align: center;
+    animation: fadeIn 2s ease-in;
+}
+header {
+    background: #222;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    border-bottom: 3px solid #ffcc00;
+    animation: bounceIn 1.5s ease-in-out;
+    transform: perspective(1000px) rotateX(10deg);
+}
+section {
+    margin: 40px auto;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    animation: zoomIn 1.5s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+}
+section:hover {
+    transform: scale(1.05) rotateY(5deg);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+h2 {
+    border-bottom: 2px solid #ffcc00;
+    display: inline-block;
+    padding-bottom: 5px;
+    animation: flipInX 1.5s ease-in;
+    transform: perspective(1000px) rotateY(5deg);
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul li {
+    padding: 8px;
+    font-size: 18px;
+    animation: slideInRight 1.5s ease-in-out;
+    transition: transform 0.3s, color 0.3s;
+}
+ul li:hover {
+    transform: scale(1.1) rotateX(10deg);
+    color: #ffcc00;
+}
+footer {
+    background: #222;
+    padding: 10px;
+    font-size: 14px;
+    border-top: 3px solid #ffcc00;
+    animation: fadeIn 2s ease-in;
+}
+.profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #98A869;
+    transition: transform 0.5s;
+}
+.profile-image:hover {
+    transform: rotateY(360deg) scale(1.1);
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes bounceIn {
+    from { transform: scale(0.5); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+@keyframes flipInX {
+    from { transform: perspective(400px) rotateX(-90deg); opacity: 0; }
+    to { transform: perspective(400px) rotateX(0); opacity: 1; }
+}
+@keyframes slideInRight {
+    from { transform: translateX(100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+a
+{
+    color: #fff;
+}
